@@ -65,7 +65,7 @@
                     //if output as csv and is a multiselect.
                     if (settings.outputAsCSV && O.is_multi && O.E.attr('name')) {
                         //create a hidden field to store csv value.
-                        O.select.append($('<input class="HEMANT123" type="hidden" />').attr('name', O.E.attr('name')).val(O.getSelStr()));
+                        O.select.append($('<input class="SUMOSELECTHIDDEN" type="hidden" />').attr('name', O.E.attr('name')).val(O.getSelStr()));
 
                         // so it can not post the original select.
                         O.E.removeAttr('name');
@@ -417,7 +417,7 @@
                     O.caption.text(O.placeholder);
 
                     //set the hidden field if post as csv is true.
-                    csvField = O.select.find('input.HEMANT123');
+                    csvField = O.select.find('input.SUMOSELECTHIDDEN');
                     if (csvField.length) csvField.val(O.getSelStr());
 
                     //add class placeholder if its a placeholder text.
@@ -531,8 +531,8 @@
                     O.select.before(O.E);
                     O.E.show();
 
-                    if (settings.outputAsCSV && O.is_multi && O.select.find('input.HEMANT123').length) {
-                        O.E.attr('name', O.select.find('input.HEMANT123').attr('name')); // restore the name;
+                    if (settings.outputAsCSV && O.is_multi && O.select.find('input.SUMOSELECTHIDDEN').length) {
+                        O.E.attr('name', O.select.find('input.SUMOSELECTHIDDEN').attr('name')); // restore the name;
                     }
                     O.select.remove();
                     delete selObj.sumo;
