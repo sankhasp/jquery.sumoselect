@@ -5,9 +5,9 @@
 /*this is applied on that hidden select. DO NOT USE display:none; or visiblity:hidden; and Do not override any of these properties. */
  .SelectClass {
     position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 100%;
     width: 100%;
     border: none;
@@ -34,7 +34,7 @@
     outline:none;
 }
 .SumoSelect:focus > .CaptionCont, .SumoSelect:hover > .CaptionCont {
-    box-shadow: 0px 0px 2px #7799D0;
+    box-shadow: 0 0 2px #7799D0;
     border-color: #7799D0;
 }
 .SumoSelect > .CaptionCont {
@@ -43,7 +43,7 @@
     min-height: 14px;
     background-color: #fff;
     border-radius:2px;
-    margin:0px;
+    margin:0;
 }
 .SumoSelect > .CaptionCont > span {
     display: block;
@@ -60,9 +60,9 @@
 }
 .SumoSelect > .CaptionCont > label {
     position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
+    top: 0;
+    right: 0;
+    bottom: 0;
     width: 30px;
 }
 .SumoSelect > .CaptionCont > label > i {
@@ -72,10 +72,10 @@
     height: 16px;
     display: block;
     position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     margin: auto;
     background-repeat: no-repeat;
     opacity: 0.8;
@@ -106,8 +106,8 @@
 .SumoSelect > .optWrapper > .options {
     list-style: none;
     display: block;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     overflow: auto;
     border-radius: 2px;
     /*Set the height of pop up here (only for desktop mode)*/
@@ -116,7 +116,7 @@
 }
 .SumoSelect > .optWrapper.isFloating > .options {
     max-height: 100%;
-    box-shadow: 0px 0px 100px #595959;
+    box-shadow: 0 0 100px #595959;
 }
 .SumoSelect > .optWrapper > .options > li {
     padding: 6px 6px;
@@ -124,11 +124,11 @@
     position: relative;
 }
 .SumoSelect > .optWrapper > .options > li:first-child {
-    border-radius: 2px 2px 0px 0px;
+    border-radius: 2px 2px 0 0;
 }
 .SumoSelect > .optWrapper > .options > li:last-child {
     border-bottom: none;
-    border-radius: 0px 0px 2px 2px;
+    border-radius: 0 0 2px 2px;
 }
 .SumoSelect > .optWrapper > .options > li:hover {
     background-color: #E4E4E4;
@@ -149,11 +149,11 @@
 /*Floating styles*/
  .SumoSelect > .optWrapper.isFloating {
     position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
+    top: 0;
+    left: 0;
+    right: 0;
     width: 90%;
-    bottom: 0px;
+    bottom: 0;
     margin: auto;
     max-height: 90%;
 }
@@ -186,36 +186,36 @@
     position:absolute;
     display:block;
     width:30px;
-    top:0px;
-    bottom:0px;
+    top:0;
+    bottom:0;
     margin-left:-35px;
 }
 .SumoSelect > .optWrapper.multiple > .options > li span i, .SumoSelect .select-all > span i {
     position: absolute;
     margin: auto;
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    bottom: 0px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     width: 14px;
     height: 14px;
     border: 1px solid #AEAEAE;
     border-radius: 2px;
-    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
     background-color: #fff;
 }
 .SumoSelect > .optWrapper > .MultiControls {
     display: none;
     border-top: 1px solid #ddd;
     background-color: #fff;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.13);
-    border-radius: 0px 0px 3px 3px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.13);
+    border-radius: 0 0 3px 3px;
 }
 .SumoSelect > .optWrapper.multiple.isFloating > .MultiControls {
     display: block;
     margin-top: 5px;
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     width: 100%;
 }
 .SumoSelect > .optWrapper.multiple.okCancelInMulti > .MultiControls {
@@ -237,10 +237,10 @@
 }
 .SumoSelect > .optWrapper.multiple > .MultiControls > p.btnOk {
     border-right: 1px solid #DBDBDB;
-    border-radius: 0px 0px 0px 3px;
+    border-radius: 0 0 0 3px;
 }
 .SumoSelect > .optWrapper.multiple > .MultiControls > p.btnCancel {
-    border-radius: 0px 0px 3px 0px;
+    border-radius: 0 0 3px 0;
 }
 /*styling for select on popup mode*/
  .SumoSelect > .optWrapper.isFloating > .options > li {
@@ -255,7 +255,7 @@
 }
 /*selected state
     .SumoSelect > .optWrapper.multiple > .options > li.selected span i:after,
-    .SumoSelect .select-all.selected > span i:after{content: '';position: absolute;width: 11px;height: 11px;top: 2px;left: 2px;background-color: rgb(17, 169, 17);border-radius: 2px;box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);}
+    .SumoSelect .select-all.selected > span i:after{content: '';position: absolute;width: 11px;height: 11px;top: 2px;left: 2px;background-color: rgb(17, 169, 17);border-radius: 2px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);}
     */
  .SumoSelect > .optWrapper.multiple > .options > li.selected span i, .SumoSelect .select-all.selected > span i, .SumoSelect .select-all.partial > span i {
     background-color: rgb(17, 169, 17);
@@ -276,11 +276,11 @@
 }
 /**Select all button**/
  .SumoSelect .select-all {
-    border-radius: 3px 3px 0px 0px;
+    border-radius: 3px 3px 0 0;
     position: relative;
     border-bottom: 1px solid #ddd;
     background-color: #fff;
-    padding: 8px 0px 3px 35px;
+    padding: 8px 0 3px 35px;
     height: 20px;
 }
 .SumoSelect .select-all > span i {
